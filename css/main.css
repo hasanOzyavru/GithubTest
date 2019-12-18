@@ -1,3 +1,29 @@
 @import "body.css";
 @import "header.css";
 @import "footer.css";
+
+#container {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(200px, 1fr));
+    grid-template-rows: 200px 300px 150px;
+    grid-template-areas:
+        ". h h h h ."
+        "m m m . s s"
+        ". . f f f f";
+}
+
+.sect1 {
+    grid-area: h;
+}
+
+.sect2 {
+    grid-area: m;
+}
+
+.sect3 {
+    grid-area: s;
+}
+
+.sect4 {
+    grid-area: f;
+}
